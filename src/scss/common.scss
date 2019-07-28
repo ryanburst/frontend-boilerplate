@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/*!
+========== CONFIG
+*/
+// configuration settings, no file should output actual markup
+@import '_config/__config';
+
+/*!
+========== VENDOR
+*/
+// styles reset (normalize) and third party scss entry point
+@import 'vendor/__vendor';
+
+
+/*!
+========== BASE
+*/
+// variables, fonts, mixins, helpers... common styles used across the entire site
+@import 'base/__base';
+
+
+/*!
+========== COMPONENTS
+*/
+// reusable components
+@import 'components/__components';
+
+
+/*!
+========== SPECIFICS
+*/
+// declarations specific to pages...features generally not reused on other pages
+@import 'specifics/__specifics';

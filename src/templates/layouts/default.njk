@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <title>{{title}} | {{ site.name }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="{{description}}">
+  <meta name="keywords" content="{{keyword}}">
+  <meta itemprop="name" content="{{title}}">
+  <meta itemprop="description" content="{{description}}">
+  <meta itemprop="image" content="{{image}}">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{site.name}}">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:creator" content="{{creator}}">
+  <meta name="twitter:image" content="{{image}}">
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:image" content="{{image}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:site_name" content="{{site.name}}">
+
+  {% block seo %}
+    <!-- Additional Page Specific Meta/SEO Goes Here -->
+  {% endblock %}
+
+  <link rel="shortcut icon" href="/images/global/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/global/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700" rel="stylesheet">
+
+  {% block jsonld %}
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "{{title}}",
+        "image": "",
+        "description": "{{description}}",
+      }
+    </script>
+  {% endblock %}
+
+  {% block styles %}
+    <link rel="stylesheet" href="/css/common.min.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" href="/css/ie-fixes.min.css" />
+    <![endif]-->
+  {% endblock %}
+
+  {% block head %}
+    <!-- Additional Page Specific Head Content Goes Here -->
+  {% endblock %}
+</head>
+<body>
+  <a id="skip-content" href="#main-content" class="sr-only">Skip to main content</a>
+  <div class="sr-only" id="announcer" aria-atomic="true" aria-live="polite"></div>
+  <!-- START: Main Container -->
+  <div class="main-container" tabindex="-1">
+    {% block header %}
+
+    {% endblock %}
+
+    <!-- START: Main Content -->
+    <main class="main-content" id="main-content" role="main">
+      {% block content %}
+
+      {% endblock %}
+
+      {% block island %}
+        <!-- Page Specific Island Content (absolute content/overlays) Goes In Here -->
+      {% endblock %}
+    </main>
+    <!-- END: Main Content -->
+    {% block footer %}
+
+    {% endblock %}
+  </div>
+  <!-- END: Main Container -->
+
+  {% block scripts %}
+    <script src="/js/common.min.js"></script>
+  {% endblock %}
+</body>
+</html>

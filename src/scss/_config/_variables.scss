@@ -1,0 +1,114 @@
+//------------------------------------------------------------
+// Colors
+//------------------------------------------------------------
+$color-midnight     : #002d5c;
+$color-dusk         : #004488;
+$color-bayview-night: #005288;
+$color-velvet       : #004f9f;
+$color-aquarium     : #005cb9;
+$color-greek-ocean  : #006cd9;
+$color-bayview-blue : #0d96d4;
+$color-ninja-turtle : #1e8935;
+$color-slime-green  : #35a94e;
+$color-seafoam-green: #d3f7e5;
+$color-ripe-tomato  : #e30000;
+$color-valentine    : #ffe5e5;
+$color-sunshine     : #ebcf00;
+$color-granite      : #4a5773;
+$color-rochester-sky: #9b9b9b;
+$color-gandalf      : #dedede;
+$color-gandalf-gray : #cccccc;
+$color-chalk        : #f5f5f5;
+$color-white        : #ffffff;
+
+// TODO Use functional color groups
+$color-border     : $color-gandalf;
+$color-text       : $color-granite;
+$color-text-alt   : $color-midnight;
+$color-link       : $color-greek-ocean;
+$color-bg         : $color-chalk;
+$color-bg-dark    : $color-dusk;
+$color-bg-dark-alt: $color-midnight;
+$color-accent     : $color-ninja-turtle;
+$color-accent-alt : $color-slime-green;
+$color-error      : $color-ripe-tomato;
+$color-error-alt  : $color-valentine;
+$color-disabled   : $color-chalk;
+
+
+//------------------------------------------------------------
+// Typography
+//------------------------------------------------------------
+$font-family-heading  : 'Merriweather', Georgia, serif;
+$font-family-body     : 'Open Sans', Arial, sans-serif;
+$font-color-body      : $color-text;
+$font-color-heading   : $color-text-alt;
+$font-color-heading-ko: $color-white;
+$font-size            : 16px;
+$font-size-alt        : 19px;
+$font-size-sm         : 13px;
+$font-weight-body     : 600;
+$font-weight-bold     : 900;
+
+//------------------------------------------------------------
+// Breakpoints
+//------------------------------------------------------------
+$media-xs-max: 479px;
+$media-sm-min: 480px;
+$media-sm-max: 859px;
+$media-md-min: 860px;
+$media-md-max: 1023px;
+$media-lg-min: 1024px;
+$media-lg-max: 1199px;
+$media-xl-min: 1200px;
+
+$break-nav-up  : 990px;
+$break-nav-down: 989px;
+$break-nav-alt-up: 1061px;
+$break-nav-alt-down: 1060px;
+
+//------------------------------------------------------------
+// Media Query Shortcuts
+// @media #{$media-sm-viewport} {
+//
+// }
+//
+// TODO: Media query include - @include media-breakpoint-up(sm)
+//------------------------------------------------------------
+$media-sm-up: "only screen and (min-width: #{$media-sm-min})";
+$media-md-up: "only screen and (min-width: #{$media-md-min})";
+$media-lg-up: "only screen and (min-width: #{$media-lg-min})";
+$media-xl-up: "only screen and (min-width: #{$media-xl-min})";
+
+$media-xs-down: "only screen and (min-width:1px) and (max-width: #{$media-xs-max})";
+$media-sm-down: "only screen and (min-width:1px) and (max-width: #{$media-sm-max})";
+$media-md-down: "only screen and (min-width:1px) and (max-width: #{$media-md-max})";
+$media-lg-down: "only screen and (min-width:1px) and (max-width: #{$media-lg-max})";
+
+$media-xs-only: "only screen and (max-width: #{$media-xs-max})";
+$media-sm-only: "only screen and (min-width: #{$media-sm-min}) and (max-width: #{$media-sm-max})";
+$media-md-only: "only screen and (min-width: #{$media-md-min}) and (max-width: #{$media-md-max})";
+$media-lg-only: "only screen and (min-width: #{$media-lg-min}) and (max-width: #{$media-lg-max})";
+$media-xl-only: "only screen and (min-width: #{$media-xl-min})";
+
+$nav-breakpoint-up: "only screen and (min-width: #{$break-nav-up})";
+$nav-breakpoint-down: "only screen and (min-width:1px) and (max-width: #{$break-nav-down})";
+$nav-breakpoint-alt-up: "only screen and (min-width: #{$break-nav-alt-up})";
+$nav-breakpoint-alt-down: "only screen and (min-width:1px) and (max-width: #{$break-nav-alt-down})";
+
+//------------------------------------------------------------
+// Grid
+//------------------------------------------------------------
+$grid-columns     : 12;
+$grid-gutter-width: 20px;
+$grid-outer-margin: 20px;
+$grid-max-width   : $media-xl-min;
+$grid-breakpoints :
+  sm $media-sm-min,
+  md $media-md-min,
+  lg $media-lg-min;
+
+// Apply slightly different grid gutters/margins at breakpoint
+$grid-breakpoint-alt  : $media-sm-min;
+$grid-outer-margin-alt: 15px;
+$grid-gutter-width-alt: 30px;
